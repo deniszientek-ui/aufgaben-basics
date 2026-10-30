@@ -9,6 +9,7 @@ func DrawRectangle(height, width int, inner, outer string) {
 	for row := range height {
 
 		for col := range width {
+			// Prüfe, ob wir gerade am Rand sind
 			if row == 0 || row == height-1 || col == 0 || col == width-1 {
 
 				fmt.Print(outer)
