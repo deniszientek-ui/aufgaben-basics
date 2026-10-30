@@ -4,7 +4,13 @@ package strings
 // Liefert die Position, an der c in s vorkommt.
 // Liefert die Länge von s, falls c nicht in s vorkommt.
 // Kommt c mehrfach vor, soll die erste Position geliefert werden.
-func PositionOf(s string, c byte) int {
-	// TODO
-	return 0
+func PositionOf(s string, c rune) int {
+
+	for i, element := range s {
+		if element == c {
+			return i
+		}
+	}
+
+	return len(s)
 }
